@@ -26,7 +26,7 @@ void ParticleFilter::init(double x, double y, double theta, double std[]) {
 	// NOTE: Consult particle_filter.h for more information about this method (and others in this file).
     num_particles = 100;
 
-    default_random_engine gen;
+    static default_random_engine gen;
 
     // Create a normal Gaussian distribution for x, y and theta
     normal_distribution <double> dist_x(x, std[0]);
